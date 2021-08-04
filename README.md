@@ -16,21 +16,21 @@ Contains code for getting the weather report based on provided zipcode/city
 
 ### Follow below commands to build and deploy:
 
-###Step-1: Create docker image with below command
+Step-1: Create docker image with below command
 ```bash
 $ cd weather_springbootapp/
 $ docker build -t weather:v0.1 .
 ```
-###Step-2: Install kind & create Kind cluster
+Step-2: Install kind & create Kind cluster
 ```bash
 $ brew install kind
 $ kind create cluster
 ```
-###Step-4: Create the Image and load the image to kind 
+Step-4: Create the Image and load the image to kind 
 ```bash
 $ kind load docker-image weather:v0.1
 ```
-###Step-5: Deploy
+Step-5: Deploy
 ```bash
 $ cd Kubernetes_deployment/
 $ kubectl apply -f .
@@ -40,7 +40,7 @@ To handle fault tolerance, I have created 3 Replicas
 For scalability, we used Horizonalpodscaler
 We can change the service type to loadBalancer to expose service to outside cluster or Ingress
 
-###Step6: Since its local deployment, we have created ClusterIP service to access it run below command
+Step6: Since its local deployment, we have created ClusterIP service to access it run below command
 ```bash
 kubectl port-forward service/weather-service 8080:80
 ```
