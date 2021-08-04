@@ -6,17 +6,13 @@ Contains code for getting the weather report based on provided zipcode/city
 * [JDK] 1.8
 * [Maven] 3
 
-### You can use the Spring Boot Maven plugin like so:
-`mvn spring-boot:run`
-
 ## Infra Code to deploy 
 
-* For testing we deploying to kind cluster for running local kubernetes cluster using container nodes
- Kind is a tool for running local kubernetes cluster using docker container nodes
+* For testing we are deploying to kind cluster, kind is a tool for running local kubernetes cluster using container nodes
 
 ### Follow below commands to build and deploy:
 
-Step-1: Create docker image with below command
+Step-1: Create docker image 
 ```bash
 $ cd weather_springbootapp/
 $ docker build -t weather:v0.1 .
@@ -40,18 +36,18 @@ To handle fault tolerance, I have created 3 Replicas
 For scalability, we used Horizonalpodscaler
 We can change the service type to loadBalancer to expose service to outside cluster or Ingress
 
-Step6: Since its local deployment, we have created ClusterIP service to access it run below command
+Step-6: Since its local deployment, we have created ClusterIP service to access it, run below command:
 ```bash
 kubectl port-forward service/weather-service 8080:80
 ```
 
-##Test Endpoint
+## Test Endpoint
 
-*Open browser and hit endpoint http://localhost:8080/weather?searchText=philadelphia
+* Open browser and hit endpoint http://localhost:8080/weather?searchText=philadelphia
 
 searchText is a query parameter pass zipcode or city
 
-*You can also test using postman UI:
+* You can also test using postman UI:
 
 Below is the json response from postman
 ```bash
@@ -96,3 +92,7 @@ Below is the json response from postman
         "gust_kph": 10.8
     }
 }```
+
+###Optional: 
+ To Run springBoot application locally:
+`mvn spring-boot:run`
