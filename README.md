@@ -95,10 +95,9 @@ Below is the json response from postman
     }
 }```
 
+
 ### Optional: 
- To Run springBoot application locally:
-### Optional: 
- To Run springBoot application locally:
-```bash
+ 
+To Run springBoot application locally:
 mvn spring-boot:run
-```
+
