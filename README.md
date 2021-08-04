@@ -43,9 +43,9 @@ kubectl port-forward service/weather-service 8080:80
 
 ## Test Endpoint
 
-* Open browser and hit endpoint http://localhost:8080/weather?searchText=philadelphia
+* Once you are done creating infra locally,  Open browser and hit endpoint http://localhost:8080/weather?searchText=philadelphia
 
-searchText is a query parameter pass zipcode or city
+searchText is a query parameter pass **zipcode** or **city**
 
 * You can also test using postman UI:
 
