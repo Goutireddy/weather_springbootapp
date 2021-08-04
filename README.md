@@ -1,5 +1,5 @@
 # Weather springboot app 
-Contains code for getting the weather report based on provided zipcode/city
+Contains code for getting the weather report based on provided **zipcode/city**
 
 ## Pre-requisites for building and running the java application:
 
@@ -40,6 +40,8 @@ Step-6: Since its local deployment, we have created ClusterIP service to access 
 ```bash
 kubectl port-forward service/weather-service 8080:80
 ```
+**For more information, please watch asciiCinema for creating your infra:**
+[![asciicast](https://asciinema.org/a/W5I321RzcUdGfljXGN7zCANw5.svg)](https://asciinema.org/a/W5I321RzcUdGfljXGN7zCANw5?speed=3?autoplay=1&preload=1)
 
 ## Test Endpoint
 
